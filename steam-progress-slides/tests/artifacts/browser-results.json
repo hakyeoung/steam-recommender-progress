@@ -10,13 +10,13 @@
     "game switch loads Hades counts and corpus",
     "version mixing examples and original evidence available",
     "Mock record and unexecuted API status separated",
-    "iframe supports search, game switch and tabs",
+    "findings replaces iframe with scoped evidence inclusion results",
     "presentation next button reaches slide 8",
     "all 8 desktop slides fit the 16:9 canvas with correct base contrast",
-    "keyboard navigation reaches live demo",
+    "keyboard navigation reaches experiment findings",
     "presenter notes toggle",
     "fullscreen enters and exits",
-    "all 8 mobile slides avoid horizontal overflow",
+    "all 8 mobile slides fit text and findings results remain reachable by scrolling",
     "390px responsive layout has no horizontal overflow",
     "JSON HTTP failure displays explicit error without fallback",
     "malformed JSON schema displays explicit error",
@@ -24,5 +24,5 @@
   ],
   "errors": [],
   "static_prefix": "/steam-project/",
-  "screenshots": 16
+  "screenshots": 17
 }

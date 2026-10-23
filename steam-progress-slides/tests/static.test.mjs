@@ -24,10 +24,12 @@ test('bundled demo files match their recorded hashes and original search/corpus 
     if (!['index.html','data/DATA_QUALITY_REPORT.md'].includes(entry.path)) assert.equal(entry.bundled_sha256,entry.source_sha256,entry.path);
   }
 });
-test('deck preserves 8 slides, actual iframe and historical metrics without remote runtime assets', async () => {
+test('deck preserves 8 slides, findings and historical metrics without remote runtime assets', async () => {
   const html=await readFile(new URL('progress/index.html',publicRoot),'utf8');
-  assert.equal([...html.matchAll(/<section class="slide(?: demo-slide)?"/g)].length,8);
-  assert.match(html,/data-src="\.\.\/demo\/index.html\?embed=1/);
+  assert.equal([...html.matchAll(/<section class="slide(?: findings-slide)?"/g)].length,8);
+  assert.doesNotMatch(html,/<iframe|demo-frame|LIVE DEMO/);
+  assert.match(html,/실험에서 발견한 문제/);
+  assert.match(html,/전체 검색 정확도나 재현율을 의미하지 않습니다/);
   for(const value of ['5 / 17','4 / 19','78','42','33']) assert.ok(html.includes(value));
   for(const file of ['progress/index.html','progress/progress.css','progress/legacy.css','progress/progress.mjs','demo/index.html']) {
     const source=await readFile(new URL(file,publicRoot),'utf8');

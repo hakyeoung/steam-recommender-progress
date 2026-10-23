@@ -5,7 +5,7 @@
 ## 발표와 데모 주소
 
 - 발표: <https://hakyeoung.github.io/steam-recommender-progress/progress/>
-- 시연 슬라이드: <https://hakyeoung.github.io/steam-recommender-progress/progress/#slide-7>
+- 실험에서 발견한 문제: <https://hakyeoung.github.io/steam-recommender-progress/progress/#slide-7>
 - 독립 데모: <https://hakyeoung.github.io/steam-recommender-progress/demo/>
 - 이전 발표: <https://hakyeoung.github.io/steam-recommender-progress/>
 
@@ -39,9 +39,9 @@ npm.cmd run preview -- --host 127.0.0.1
 - F 또는 전체화면 버튼: 브라우저 전체화면
 - N 또는 발표 메모: 슬라이드별 설명·근거 확인
 - `#slide-1`~`#slide-8`: 개별 슬라이드 링크
-- iframe 입력 중에는 하단 이동 버튼 사용. 데모 새 탭 열기 제공
+- 7장: 자료 확보·검색의 한계와 기존 B 입력의 근거 포함 결과
 
-데스크톱은 1600×900 기준의 16:9 전체 화면을 비율 유지 축소합니다. 850px 이하에서는 읽기·조작이 가능한 세로 스크롤 화면으로 전환합니다. 검색 데모는 자체 내부 스크롤로 결과와 원문 검사기를 사용합니다.
+데스크톱은 1600×900 기준의 16:9 전체 화면을 비율 유지 축소합니다. 850px 이하에서는 읽기·조작이 가능한 세로 스크롤 화면으로 전환합니다. iframe과 시연 전용 UI·스타일·로딩 코드는 제거했습니다. 기존 검색 데모 소스와 데이터는 독립 URL에 보존하며 발표에서 자동으로 로드하지 않습니다.
 
 ## 내용과 실험 범위
 
@@ -57,15 +57,15 @@ Isaac 78·15·5/17, Hades 42·17·4/19는 quality-004 기록입니다. 5/17·4/1
 
 - 기존 Vite 프로덕션 빌드 성공. 기존 발표 자산 파일명 유지
 - 실제 코퍼스 검색 회귀 테스트 **58개 통과**, Python 순위·점수 52조합 포함
-- Chrome 브라우저 점검 **21개 통과**: 실제 검색, 게임 전환, 원문/출처, SHA-256, 누락·오탐·버전 사례, iframe, 키보드, 메모, 전체화면, 8장 16:9 배치, 390px 반응형, 로딩 실패 처리
-- [브라우저 결과 JSON](tests/artifacts/browser-results.json), [시연 화면](tests/artifacts/slide-7.png)
+- Chrome 브라우저 점검 **21개 통과**: 보존된 독립 데모의 검색·원문·SHA-256, 7장의 실험 문제와 수치 범위, iframe 제거, 키보드, 메모, 전체화면, 8장 16:9 배치, 390px 반응형·텍스트 넘침, 로딩 실패 처리
+- [브라우저 결과 JSON](tests/artifacts/browser-results.json), [7장 화면](tests/artifacts/slide-7.png)
 - 정적 링크·배포 파일 무결성 검사는 `npm test`에서 함께 수행
 
-브라우저 테스트는 `/steam-project/`라는 저장소 하위 경로를 모사하여 `dist/`를 서비스합니다. 독립 데모와 슬라이드 iframe 모두 확인합니다. 원본 실험 테스트를 새로 실행하거나 LLM을 호출하지 않았습니다. 외부 출처 서버의 현재 가용성은 검증 범위 밖입니다.
+브라우저 테스트는 `/steam-project/`라는 저장소 하위 경로를 모사하여 `dist/`를 서비스합니다. 독립 데모 보존 및 8장 발표를 각각 확인합니다. 모바일 7장은 스크롤 하단의 표·수치 해석까지 확인합니다. 원본 실험 테스트를 새로 실행하거나 LLM을 호출하지 않았습니다. 외부 출처 서버의 현재 가용성은 검증 범위 밖입니다.
 
 ## 배포
 
-기존 `.github/workflows/deploy.yml`을 재사용합니다. 테스트 단계를 추가했으며 배포 출력은 계속 `steam-progress-slides/dist` 하나입니다. 새 Pages 사이트·브랜치·중복 워크플로는 생성하지 않습니다. 상대 URL `../demo/index.html`을 사용해 저장소 하위 경로를 지원합니다.
+기존 `.github/workflows/deploy.yml`을 재사용합니다. 배포 출력은 계속 `steam-progress-slides/dist` 하나입니다. 새 Pages 사이트·브랜치·중복 워크플로는 생성하지 않습니다. 기존 발표 주소와 `#slide-1`~`#slide-8` 링크를 유지합니다.
 
 ```powershell
 git add README.md .github/workflows/deploy.yml steam-progress-slides

@@ -69,12 +69,12 @@ try{
   await click('[data-view="quality"]');await click('[data-id="version"]');assert.match(await js(`document.querySelector('#content').textContent`),/Early Access/);pass('version mixing examples and original evidence available');
   await click('[data-view="status"]');assert.match(await js(`document.querySelector('#content').textContent`),/33개通過|33개 통과/);assert.match(await js(`document.querySelector('#content').textContent`),/미실행/);await shot('05-status');pass('Mock record and unexecuted API status separated');
   await send('Page.navigate',{url:origin+prefix+'progress/index.html#slide-7'});
-  await eventually(()=>js(`document.querySelector('iframe')?.contentDocument?.querySelector('#game-name')?.textContent.includes('Isaac')`));
-  await js(`{const d=document.querySelector('iframe').contentDocument;d.querySelector('[data-view="search"]').click();d.querySelector('[data-id="weapon interaction"]').click();}`);
-  assert.ok(await js(`document.querySelector('iframe').contentDocument.querySelectorAll('.result').length>0`));
-  await js(`document.querySelector('iframe').contentDocument.querySelector('[data-game="1145360"]').click()`);
-  assert.equal(await js(`document.querySelector('iframe').contentDocument.querySelector('#game-name').textContent`),'Hades');
-  await shot('06-presentation-iframe');pass('iframe supports search, game switch and tabs');
+  await eventually(()=>js(`!document.querySelectorAll('.slide')[6].hidden`));
+  assert.equal(await js(`document.querySelectorAll('iframe').length`),0);
+  assert.match(await js(`document.querySelector('#title-7').textContent`),/근거 확보와 검색의 한계/);
+  assert.equal(await js(`document.querySelectorAll('.findings-table tbody tr').length`),2);
+  assert.match(await js(`document.querySelector('.findings-caveat').textContent`),/전체 검색 정확도나 재현율을 의미하지 않습니다/);
+  await shot('06-experiment-findings');pass('findings replaces iframe with scoped evidence inclusion results');
   await click('#next');assert.equal(await js(`document.querySelectorAll('.slide')[7].hidden`),false);pass('presentation next button reaches slide 8');
   await send('Emulation.setDeviceMetricsOverride',{width:1600,height:900,deviceScaleFactor:1,mobile:false});
   for(let n=1;n<=8;n++){
@@ -84,18 +84,20 @@ try{
     await shot(`slide-${n}`);
     assert.equal(await js(`document.querySelectorAll('.slide')[${n-1}].scrollHeight <= document.querySelectorAll('.slide')[${n-1}].clientHeight+1`),true,`slide ${n} content fits`);
     assert.equal(await js(`document.querySelector('.slide-scroll').scrollHeight <= document.querySelector('.slide-scroll').clientHeight+1`),true,`slide ${n} container fits`);
-    await shot(`slide-${n}`);
   }
   assert.equal(await js(`getComputedStyle(document.documentElement).color`),'rgb(230, 237, 244)');
   pass('all 8 desktop slides fit the 16:9 canvas with correct base contrast');
   await js(`location.hash='#slide-6'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[5].hidden`));
   await send('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight',windowsVirtualKeyCode:39});
-  await eventually(()=>js(`!document.querySelectorAll('.slide')[6].hidden`));pass('keyboard navigation reaches live demo');
+  await eventually(()=>js(`!document.querySelectorAll('.slide')[6].hidden`));pass('keyboard navigation reaches experiment findings');
   await click('#notes-toggle');assert.equal(await js(`document.querySelector('#notes').hidden`),false);await click('#notes-close');pass('presenter notes toggle');
   await click('#fullscreen');await eventually(()=>js(`!!document.fullscreenElement`));await js(`document.exitFullscreen()`);pass('fullscreen enters and exits');
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
-  for(let n=1;n<=8;n++) {await js(`location.hash='#slide-${n}'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[${n-1}].hidden`));assert.equal(await js(`document.documentElement.scrollWidth <= innerWidth`),true,`mobile slide ${n} fits width`);}
-  await delay(350);await shot('08-mobile-presentation');pass('all 8 mobile slides avoid horizontal overflow');
+  for(let n=1;n<=8;n++) {await js(`location.hash='#slide-${n}'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[${n-1}].hidden`));assert.equal(await js(`document.documentElement.scrollWidth <= innerWidth`),true,`mobile slide ${n} fits width`);assert.deepEqual(await js(`[...document.querySelectorAll('.slide:not([hidden]) h1,.slide:not([hidden]) h3,.slide:not([hidden]) p,.slide:not([hidden]) li,.slide:not([hidden]) td')].filter(e=>e.scrollWidth>e.clientWidth+1).map(e=>e.textContent)`),[],`mobile slide ${n} text fits`);}
+  await js(`location.hash='#slide-7'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[6].hidden`));await delay(350);await shot('08-mobile-presentation');
+  await js(`document.querySelector('.slide-scroll').scrollTop=document.querySelector('.slide-scroll').scrollHeight`);
+  assert.equal(await js(`document.querySelector('.findings-caveat').getBoundingClientRect().bottom <= document.querySelector('.slide-scroll').getBoundingClientRect().bottom+1`),true,'mobile findings disclaimer is reachable');
+  await shot('09-mobile-findings-results');pass('all 8 mobile slides fit text and findings results remain reachable by scrolling');
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await send('Page.navigate',{url:demo});await ready();
   assert.equal(await js(`document.documentElement.scrollWidth <= innerWidth`),true);await shot('07-mobile');pass('390px responsive layout has no horizontal overflow');
   // Failure scenario: real 404, no fallback data. Independent new document.
@@ -105,7 +107,7 @@ try{
   await send('Page.addScriptToEvaluateOnNewDocument',{source:`window.fetch=()=>Promise.resolve(new Response('{}',{status:200,headers:{'Content-Type':'application/json'}}));`});
   await send('Page.navigate',{url:demo});await eventually(()=>js(`!!document.querySelector('.load-error')`));pass('malformed JSON schema displays explicit error');
   assert.deepEqual(errors,[]);pass('no browser JavaScript exceptions');
-  await writeFile(join(artifacts,'browser-results.json'),JSON.stringify({checks,errors,static_prefix:prefix,screenshots:16},null,2)+'\n');
+  await writeFile(join(artifacts,'browser-results.json'),JSON.stringify({checks,errors,static_prefix:prefix,screenshots:17},null,2)+'\n');
   process.stdout.write(`${checks.length} browser checks passed.\n`);
 }finally{
   if(socket?.readyState===1){try{await send('Browser.close');}catch{}socket.close();}
