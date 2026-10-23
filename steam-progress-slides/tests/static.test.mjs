@@ -33,6 +33,7 @@ test('deck preserves 8 slides, findings and historical metrics without remote ru
   for(const value of ['5 / 17','4 / 19','78','42','33']) assert.ok(html.includes(value));
   const results=html.match(/<section class="slide" id="evidence-results"[\s\S]*?<\/section>/)[0];
   assert.doesNotMatch(results,/기존 B 입력|LLM에 전달된/);
+  assert.match(results,/<table class="retrieval-table">/);
   for(const text of ['확인된 근거 문단','검색으로 선택된 문단','검색에서 누락된 문단','17개','5개','12개','19개','4개','15개','LLM에 제공할 입력으로','전체 검색 시스템의 재현율이나 정확도를 의미하지 않습니다']) assert.ok(results.includes(text),text);
   for(const file of ['progress/index.html','progress/progress.css','progress/legacy.css','progress/progress.mjs','demo/index.html']) {
     const source=await readFile(new URL(file,publicRoot),'utf8');

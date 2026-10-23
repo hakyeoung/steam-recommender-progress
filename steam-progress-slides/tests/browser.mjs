@@ -97,7 +97,7 @@ try{
   await js(`location.hash='#slide-6'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[5].hidden`));await delay(350);await shot('10-mobile-retrieval');
   await js(`document.querySelector('.slide-scroll').scrollTop=document.querySelector('.slide-scroll').scrollHeight`);
   assert.equal(await js(`document.querySelector('.retrieval-caveat').getBoundingClientRect().bottom <= document.querySelector('.slide-scroll').getBoundingClientRect().bottom+1`),true,'mobile slide 6 disclaimer remains reachable');
-  assert.deepEqual(await js(`[...document.querySelectorAll('.retrieval-bar>div')].map(e=>e.textContent)`),['5개','12개','4개','15개']);
+  assert.deepEqual(await js(`[...document.querySelectorAll('.retrieval-table tbody td')].map(e=>e.textContent)`),['17개','5개','12개','19개','4개','15개']);
   await shot('11-mobile-retrieval-results');
   await js(`location.hash='#slide-7'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[6].hidden`));await delay(350);await shot('08-mobile-presentation');
   await js(`document.querySelector('.slide-scroll').scrollTop=document.querySelector('.slide-scroll').scrollHeight`);
