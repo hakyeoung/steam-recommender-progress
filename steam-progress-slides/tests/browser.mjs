@@ -88,6 +88,10 @@ try{
   assert.equal(await js(`getComputedStyle(document.documentElement).color`),'rgb(230, 237, 244)');
   pass('all 8 desktop slides fit the 16:9 canvas with correct base contrast');
   await js(`location.hash='#slide-6'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[5].hidden`));
+  assert.equal(await js(`getComputedStyle(document.querySelector('.retrieval-table')).display`),'table');
+  assert.equal(await js(`getComputedStyle(document.querySelector('.retrieval-table td')).borderRightWidth`),'1px');
+  assert.deepEqual(await js(`Array.from(document.querySelectorAll('.retrieval-table tbody tr'),row=>{const cells=[...row.children].map(e=>e.getBoundingClientRect());return cells.length===4&&cells.every(e=>Math.abs(e.top-cells[0].top)<1)&&cells.every((e,i)=>i===0||e.left>=cells[i-1].right-1);})`),[true,true]);
+  assert.equal(await js(`['legacy.css','progress.css','progress.mjs'].every(name=>[...document.querySelectorAll('link[href],script[src]')].some(e=>{const u=new URL(e.href||e.src);return u.pathname.endsWith('/'+name)&&/^[0-9a-f]{12}$/.test(u.searchParams.get('v'));}))`),true,'production assets are revisioned');
   await send('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight',windowsVirtualKeyCode:39});
   await eventually(()=>js(`!document.querySelectorAll('.slide')[6].hidden`));pass('keyboard navigation reaches experiment findings');
   await click('#notes-toggle');assert.equal(await js(`document.querySelector('#notes').hidden`),false);await click('#notes-close');pass('presenter notes toggle');

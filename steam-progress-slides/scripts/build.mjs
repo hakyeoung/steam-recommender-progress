@@ -1,4 +1,5 @@
-import { existsSync, readdirSync, rmdirSync, unlinkSync } from 'node:fs';
+import { existsSync, readdirSync, rmdirSync, unlinkSync, readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'vite';
@@ -23,3 +24,15 @@ function emptyDirectory(directory) {
 if (outputDirectory !== join(projectRoot, 'dist')) throw new Error('Unexpected build output path');
 if (existsSync(outputDirectory)) emptyDirectory(outputDirectory);
 await build({ root: projectRoot, build: { outDir: outputDirectory, emptyOutDir: false } });
+
+// Public HTML is copied by Vite without fingerprinting its CSS/JS. Give each
+// revision a distinct asset URL so cached styles cannot be reused for new markup.
+const progressDirectory = join(outputDirectory, 'progress');
+const progressHtmlPath = join(progressDirectory, 'index.html');
+let progressHtml = readFileSync(progressHtmlPath, 'utf8');
+for (const filename of ['legacy.css', 'progress.css', 'progress.mjs']) {
+  const bytes = readFileSync(join(progressDirectory, filename));
+  const revision = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
+  progressHtml = progressHtml.replace(`"${filename}"`, `"${filename}?v=${revision}"`);
+}
+writeFileSync(progressHtmlPath, progressHtml);

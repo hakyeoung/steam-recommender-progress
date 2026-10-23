@@ -69,6 +69,8 @@ Isaac 78·15·5/17, Hades 42·17·4/19는 quality-004 기록입니다. 5/17·4/1
 
 기존 `.github/workflows/deploy.yml`을 재사용합니다. 배포 출력은 계속 `steam-progress-slides/dist` 하나입니다. 새 Pages 사이트·브랜치·중복 워크플로는 생성하지 않습니다. 기존 발표 주소와 `#slide-1`~`#slide-8` 링크를 유지합니다.
 
+발표의 CSS/JS는 빌드 때 내용 해시를 URL에 붙입니다. GitHub Pages의 정적 파일 캐시에서 이전 스타일이 재사용되지 않도록 처리합니다. 이전 페이지 자체가 브라우저에 남아 있으면 강력 새로고침하거나 발표 URL에 `?v=table`을 붙여 최신 HTML을 엽니다. 브라우저 검사는 실제 표 표시, 셀 테두리, 4열의 행 정렬과 스타일 버전 URL을 확인합니다.
+
 ```powershell
 git add README.md .github/workflows/deploy.yml steam-progress-slides
 git commit -m "Add feature extraction progress presentation and live demo"
