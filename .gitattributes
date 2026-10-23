@@ -1,0 +1,2 @@
+# Preserve the exact bytes of the audited demo snapshot on Windows and Linux.
+steam-progress-slides/public/demo/** -text
