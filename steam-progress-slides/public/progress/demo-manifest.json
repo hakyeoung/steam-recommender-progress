@@ -1,0 +1,75 @@
+{
+  "source": "gamer_recommend/docs/demo",
+  "files": [
+    {
+      "path": "app.mjs",
+      "source_sha256": "d933779638a7d6a000cf98ae176a460ba31d0fa31e90e41621c8127527a9208d",
+      "bundled_sha256": "d933779638a7d6a000cf98ae176a460ba31d0fa31e90e41621c8127527a9208d"
+    },
+    {
+      "path": "data/audit/evidence.json",
+      "source_sha256": "848f2656de1591f17106237237edead22a1a80d5798e1cd547aa63632bd0f687",
+      "bundled_sha256": "848f2656de1591f17106237237edead22a1a80d5798e1cd547aa63632bd0f687"
+    },
+    {
+      "path": "data/audit/evidence.md",
+      "source_sha256": "17b816b5f1c4242399c73bb8b5a9642bc8876f9de0ce433da8eba3031a889a8a",
+      "bundled_sha256": "17b816b5f1c4242399c73bb8b5a9642bc8876f9de0ce433da8eba3031a889a8a"
+    },
+    {
+      "path": "data/audit/official_inventory.csv",
+      "source_sha256": "13f0721916276a697ad1f5a7f880503fc3603a484bb9a0448416a05b913350e9",
+      "bundled_sha256": "13f0721916276a697ad1f5a7f880503fc3603a484bb9a0448416a05b913350e9"
+    },
+    {
+      "path": "data/audit/retrieval_ranks.json",
+      "source_sha256": "f30b8d5eae432bd844992f2482ccf9a1c1d4cc44e95afe55093fc2e2404f0966",
+      "bundled_sha256": "f30b8d5eae432bd844992f2482ccf9a1c1d4cc44e95afe55093fc2e2404f0966"
+    },
+    {
+      "path": "data/audit/search_top3.csv",
+      "source_sha256": "2f09ff6128fa62dd7a5c533c2decd3bae245190f21d092854ddca6a06dd836c9",
+      "bundled_sha256": "2f09ff6128fa62dd7a5c533c2decd3bae245190f21d092854ddca6a06dd836c9"
+    },
+    {
+      "path": "data/audit/summary.json",
+      "source_sha256": "63284bff78ca3d756151383f628a0d9c8dbf518ebb8556e8d14a397c3342d652",
+      "bundled_sha256": "63284bff78ca3d756151383f628a0d9c8dbf518ebb8556e8d14a397c3342d652"
+    },
+    {
+      "path": "data/corpus.json",
+      "source_sha256": "53340fbb7b94a6bfcff0285b8867153666eba080cd159f43f06619a52c7886d5",
+      "bundled_sha256": "53340fbb7b94a6bfcff0285b8867153666eba080cd159f43f06619a52c7886d5"
+    },
+    {
+      "path": "data/DATA_QUALITY_REPORT.md",
+      "source_sha256": "de642bdfe635187326c83adfa834b2912d0413ca4dec346064b2f7ff5ba35d2e",
+      "bundled_sha256": "414b7ca0aa4df8fa2fb418369030305748f3512525900578ee701d28c960f2cd"
+    },
+    {
+      "path": "data/python-rankings.json",
+      "source_sha256": "7cf9e15fdb632405cb0e355e13f43e34bc6cdcf979e895b4593037e0ce3bf4b0",
+      "bundled_sha256": "7cf9e15fdb632405cb0e355e13f43e34bc6cdcf979e895b4593037e0ce3bf4b0"
+    },
+    {
+      "path": "embed.css",
+      "source_sha256": "ee1ac3d2b776583b613423278d081d71ff7203205091f9f51c8b0bea9e773d7e",
+      "bundled_sha256": "ee1ac3d2b776583b613423278d081d71ff7203205091f9f51c8b0bea9e773d7e"
+    },
+    {
+      "path": "index.html",
+      "source_sha256": "b0ec343a0f15c4c008934cafc1f6e12a09574f60bae9d03547c51b3d873fe13a",
+      "bundled_sha256": "330a9c1097a5972b15d66516862c2054af8d84a36cc5d9a6161fe2b90a39008c"
+    },
+    {
+      "path": "search.mjs",
+      "source_sha256": "82541b85f9beb09b7fcea7cf3ae5da456ca00086b780954d6ca4025a28a38602",
+      "bundled_sha256": "82541b85f9beb09b7fcea7cf3ae5da456ca00086b780954d6ca4025a28a38602"
+    },
+    {
+      "path": "style.css",
+      "source_sha256": "4b7876de4b555534361d152e8171b6a3f95a889e3ca1262b44f7128e147214dc",
+      "bundled_sha256": "4b7876de4b555534361d152e8171b6a3f95a889e3ca1262b44f7128e147214dc"
+    }
+  ]
+}

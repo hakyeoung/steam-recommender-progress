@@ -1,0 +1,562 @@
+[
+  {
+    "evidence_id": "e001",
+    "game_id": 250900,
+    "paragraph_id": "d-208c3e02bd7d6727b0343482:p0001",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 10,
+      "retention": null,
+      "application": 6,
+      "interaction": 19,
+      "ordinary_acquisition": 16,
+      "attack_change": 45
+    }
+  },
+  {
+    "evidence_id": "e002",
+    "game_id": 250900,
+    "paragraph_id": "d-28d6c96031c7f8307cb268b8:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 99,
+      "retention": null,
+      "application": 14,
+      "interaction": 6,
+      "ordinary_acquisition": null,
+      "attack_change": 43
+    }
+  },
+  {
+    "evidence_id": "e003",
+    "game_id": 250900,
+    "paragraph_id": "d-4885b01f211a41bf985d4932:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 100,
+      "retention": null,
+      "application": 15,
+      "interaction": 7,
+      "ordinary_acquisition": null,
+      "attack_change": 44
+    }
+  },
+  {
+    "evidence_id": "e004",
+    "game_id": 250900,
+    "paragraph_id": "d-5353c059cc046b58ba0afdf1:p0001",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 70,
+      "retention": null,
+      "application": null,
+      "interaction": 68,
+      "ordinary_acquisition": null,
+      "attack_change": 25
+    }
+  },
+  {
+    "evidence_id": "e005",
+    "game_id": 250900,
+    "paragraph_id": "d-5409b2c4acf0a2a77984490e:p0000",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 4,
+      "retention": 69,
+      "application": null,
+      "interaction": 36,
+      "ordinary_acquisition": 11,
+      "attack_change": 17
+    }
+  },
+  {
+    "evidence_id": "e006",
+    "game_id": 250900,
+    "paragraph_id": "d-55c29d161515969ec05c176b:p0002",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 12,
+      "retention": 34,
+      "application": 10,
+      "interaction": 46,
+      "ordinary_acquisition": 56,
+      "attack_change": 90
+    }
+  },
+  {
+    "evidence_id": "e007",
+    "game_id": 250900,
+    "paragraph_id": "d-59ee496ecad859bfc122d1ee:p0004",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 47,
+      "retention": 87,
+      "application": null,
+      "interaction": 31,
+      "ordinary_acquisition": null,
+      "attack_change": 7
+    }
+  },
+  {
+    "evidence_id": "e008",
+    "game_id": 250900,
+    "paragraph_id": "d-59ee496ecad859bfc122d1ee:p0004",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 47,
+      "retention": 87,
+      "application": null,
+      "interaction": 31,
+      "ordinary_acquisition": null,
+      "attack_change": 7
+    }
+  },
+  {
+    "evidence_id": "e009",
+    "game_id": 250900,
+    "paragraph_id": "d-8bebc48cf9af62e44401c8e8:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 20,
+      "retention": 75,
+      "application": null,
+      "interaction": 59,
+      "ordinary_acquisition": 43,
+      "attack_change": 10
+    }
+  },
+  {
+    "evidence_id": "e010",
+    "game_id": 250900,
+    "paragraph_id": "d-9af091f3f04357db6451d692:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 52,
+      "retention": null,
+      "application": 24,
+      "interaction": 13,
+      "ordinary_acquisition": null,
+      "attack_change": 42
+    }
+  },
+  {
+    "evidence_id": "e011",
+    "game_id": 250900,
+    "paragraph_id": "d-b3209253a6659f4a5067aa4f:p0002",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 31,
+      "retention": 78,
+      "application": null,
+      "interaction": 38,
+      "ordinary_acquisition": null,
+      "attack_change": 65
+    }
+  },
+  {
+    "evidence_id": "e012",
+    "game_id": 250900,
+    "paragraph_id": "d-bd5d834360056dc027813b31:p0001",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 19,
+      "retention": null,
+      "application": null,
+      "interaction": 30,
+      "ordinary_acquisition": 10,
+      "attack_change": 41
+    }
+  },
+  {
+    "evidence_id": "e013",
+    "game_id": 250900,
+    "paragraph_id": "d-ccb0d07d03ac75bea9008c21:p0002",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 8,
+      "retention": 35,
+      "application": 28,
+      "interaction": null,
+      "ordinary_acquisition": 1,
+      "attack_change": 35
+    }
+  },
+  {
+    "evidence_id": "e014",
+    "game_id": 250900,
+    "paragraph_id": "d-ccb0d07d03ac75bea9008c21:p0002",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 8,
+      "retention": 35,
+      "application": 28,
+      "interaction": null,
+      "ordinary_acquisition": 1,
+      "attack_change": 35
+    }
+  },
+  {
+    "evidence_id": "e015",
+    "game_id": 250900,
+    "paragraph_id": "d-ccb0d07d03ac75bea9008c21:p0002",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 8,
+      "retention": 35,
+      "application": 28,
+      "interaction": null,
+      "ordinary_acquisition": 1,
+      "attack_change": 35
+    }
+  },
+  {
+    "evidence_id": "e016",
+    "game_id": 250900,
+    "paragraph_id": "d-d96564ad35c78cf12c9fb419:p0000",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 49,
+      "retention": 1,
+      "application": null,
+      "interaction": 15,
+      "ordinary_acquisition": 9,
+      "attack_change": 1
+    }
+  },
+  {
+    "evidence_id": "e017",
+    "game_id": 250900,
+    "paragraph_id": "d-da3b743b0dd4866d6c1774f4:p0000",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 3,
+      "retention": 90,
+      "application": 8,
+      "interaction": 44,
+      "ordinary_acquisition": 4,
+      "attack_change": 60
+    }
+  },
+  {
+    "evidence_id": "e018",
+    "game_id": 250900,
+    "paragraph_id": "d-da3b743b0dd4866d6c1774f4:p0001",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 25,
+      "retention": 4,
+      "application": null,
+      "interaction": 55,
+      "ordinary_acquisition": 32,
+      "attack_change": null
+    }
+  },
+  {
+    "evidence_id": "e019",
+    "game_id": 250900,
+    "paragraph_id": "d-f060c69512770fa83c6763e4:p0004",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 54,
+      "retention": null,
+      "application": null,
+      "interaction": 11,
+      "ordinary_acquisition": null,
+      "attack_change": 19
+    }
+  },
+  {
+    "evidence_id": "e020",
+    "game_id": 250900,
+    "paragraph_id": "d-f060c69512770fa83c6763e4:p0003",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 14,
+      "retention": 14,
+      "application": 16,
+      "interaction": 2,
+      "ordinary_acquisition": 5,
+      "attack_change": 3
+    }
+  },
+  {
+    "evidence_id": "e021",
+    "game_id": 1145360,
+    "paragraph_id": "d-0db63f607a626a4bffd438e4:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 16,
+      "retention": null,
+      "application": null,
+      "interaction": 11,
+      "ordinary_acquisition": null,
+      "attack_change": 5
+    }
+  },
+  {
+    "evidence_id": "e022",
+    "game_id": 1145360,
+    "paragraph_id": "d-1992305fa43b3c7dd990df6f:p0000",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 20,
+      "retention": 44,
+      "application": null,
+      "interaction": 1,
+      "ordinary_acquisition": 41,
+      "attack_change": 16
+    }
+  },
+  {
+    "evidence_id": "e023",
+    "game_id": 1145360,
+    "paragraph_id": "d-1a7f0e855d5f75e290e1e4bb:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 76,
+      "retention": null,
+      "application": 8,
+      "interaction": 53,
+      "ordinary_acquisition": null,
+      "attack_change": 34
+    }
+  },
+  {
+    "evidence_id": "e024",
+    "game_id": 1145360,
+    "paragraph_id": "d-2144d5ebe8925d307a1d0b74:p0000",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 4,
+      "retention": null,
+      "application": null,
+      "interaction": 17,
+      "ordinary_acquisition": 14,
+      "attack_change": 1
+    }
+  },
+  {
+    "evidence_id": "e025",
+    "game_id": 1145360,
+    "paragraph_id": "d-31d05527ea3eb3652240a9dd:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 30,
+      "retention": 61,
+      "application": null,
+      "interaction": 18,
+      "ordinary_acquisition": 53,
+      "attack_change": 39
+    }
+  },
+  {
+    "evidence_id": "e026",
+    "game_id": 1145360,
+    "paragraph_id": "d-347448a24c72cacfb2fea45a:p0003",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 1,
+      "retention": 13,
+      "application": null,
+      "interaction": 5,
+      "ordinary_acquisition": 1,
+      "attack_change": 31
+    }
+  },
+  {
+    "evidence_id": "e027",
+    "game_id": 1145360,
+    "paragraph_id": "d-347448a24c72cacfb2fea45a:p0001",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 8,
+      "retention": 21,
+      "application": null,
+      "interaction": 25,
+      "ordinary_acquisition": null,
+      "attack_change": 4
+    }
+  },
+  {
+    "evidence_id": "e028",
+    "game_id": 1145360,
+    "paragraph_id": "d-3a4ba9c6d006a778498b144f:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 32,
+      "retention": 39,
+      "application": null,
+      "interaction": 49,
+      "ordinary_acquisition": null,
+      "attack_change": 56
+    }
+  },
+  {
+    "evidence_id": "e029",
+    "game_id": 1145360,
+    "paragraph_id": "d-52f7f5dd188fcce5edc9dbe8:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 25,
+      "retention": null,
+      "application": null,
+      "interaction": 46,
+      "ordinary_acquisition": 42,
+      "attack_change": 13
+    }
+  },
+  {
+    "evidence_id": "e030",
+    "game_id": 1145360,
+    "paragraph_id": "d-5f934a20684631f86db898a3:p0003",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 15,
+      "retention": 33,
+      "application": null,
+      "interaction": 43,
+      "ordinary_acquisition": 6,
+      "attack_change": 24
+    }
+  },
+  {
+    "evidence_id": "e031",
+    "game_id": 1145360,
+    "paragraph_id": "d-5f934a20684631f86db898a3:p0003",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 15,
+      "retention": 33,
+      "application": null,
+      "interaction": 43,
+      "ordinary_acquisition": 6,
+      "attack_change": 24
+    }
+  },
+  {
+    "evidence_id": "e032",
+    "game_id": 1145360,
+    "paragraph_id": "d-6b0a160e2c4cc515afd0a407:p0003",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 21,
+      "retention": null,
+      "application": 6,
+      "interaction": 27,
+      "ordinary_acquisition": null,
+      "attack_change": 12
+    }
+  },
+  {
+    "evidence_id": "e033",
+    "game_id": 1145360,
+    "paragraph_id": "d-6ea81150882f8d707d3b6c14:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 7,
+      "retention": null,
+      "application": null,
+      "interaction": 62,
+      "ordinary_acquisition": 2,
+      "attack_change": 60
+    }
+  },
+  {
+    "evidence_id": "e034",
+    "game_id": 1145360,
+    "paragraph_id": "d-6ecd6d64b9232c0394d88a96:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 12,
+      "retention": 55,
+      "application": null,
+      "interaction": 10,
+      "ordinary_acquisition": null,
+      "attack_change": 6
+    }
+  },
+  {
+    "evidence_id": "e035",
+    "game_id": 1145360,
+    "paragraph_id": "d-73aff42a023025bda399749b:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 19,
+      "retention": 57,
+      "application": null,
+      "interaction": 34,
+      "ordinary_acquisition": 19,
+      "attack_change": 11
+    }
+  },
+  {
+    "evidence_id": "e036",
+    "game_id": 1145360,
+    "paragraph_id": "d-783f84ed01ce1f3fb1d5a080:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 9,
+      "retention": null,
+      "application": null,
+      "interaction": 7,
+      "ordinary_acquisition": 3,
+      "attack_change": 25
+    }
+  },
+  {
+    "evidence_id": "e037",
+    "game_id": 1145360,
+    "paragraph_id": "d-93ccdbdd1010ab053b06ba51:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 55,
+      "retention": 48,
+      "application": null,
+      "interaction": 32,
+      "ordinary_acquisition": 32,
+      "attack_change": 27
+    }
+  },
+  {
+    "evidence_id": "e038",
+    "game_id": 1145360,
+    "paragraph_id": "d-989feb2dec726a84a5b724de:p0000",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 45,
+      "retention": 9,
+      "application": null,
+      "interaction": 30,
+      "ordinary_acquisition": null,
+      "attack_change": 33
+    }
+  },
+  {
+    "evidence_id": "e039",
+    "game_id": 1145360,
+    "paragraph_id": "d-a9550ddd1968393f4458ce4b:p0006",
+    "in_existing_B_selection": true,
+    "rank_by_query": {
+      "group_rules": 24,
+      "retention": 4,
+      "application": null,
+      "interaction": 48,
+      "ordinary_acquisition": 20,
+      "attack_change": 68
+    }
+  },
+  {
+    "evidence_id": "e040",
+    "game_id": 1145360,
+    "paragraph_id": "d-a9550ddd1968393f4458ce4b:p0003",
+    "in_existing_B_selection": false,
+    "rank_by_query": {
+      "group_rules": 58,
+      "retention": 12,
+      "application": null,
+      "interaction": 44,
+      "ordinary_acquisition": null,
+      "attack_change": null
+    }
+  }
+]

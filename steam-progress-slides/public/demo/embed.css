@@ -1,0 +1,5 @@
+/* Optional compact presentation view; all data and interactions remain identical. */
+body.embedded .intro{display:none}
+body.embedded .topbar{height:48px}
+body.embedded .game-heading{border-top:0;padding:18px 0}
+body.embedded .brand{margin-bottom:30px}

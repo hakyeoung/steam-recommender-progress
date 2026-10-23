@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Steam 수집 문서와 BM25 검색 품질을 직접 확인하는 실험 웹 데모">
+  <title>Evidence Lab · Steam 게임 특성 실험</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="embed.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../progress/index.html#slide-7" target="_top"><span class="brand-icon">E<span>↗</span></span><span>EVIDENCE LAB<small>STEAM RESEARCH / 2026</small></span></a>
+      <div class="sidebar-label">COLLECTED GAMES <span>02</span></div>
+      <div id="games" class="games" aria-label="게임 선택"></div>
+      <div class="scope-note"><span class="dot"></span> 실제 수집 자료 사용<p>저장된 문서 안에서 검색합니다.<br>Steam 전체·위키 검색은 지원하지 않습니다.</p></div>
+      <div class="sidebar-bottom"><div class="sidebar-label">EXPERIMENT SNAPSHOT</div><p>OpenAI 실제 추출 <strong>미실행</strong></p><p>A/B/C 비교 <strong>미완료</strong></p><span>추천 결과 · 특징 점수 미생성</span><a href="../progress/index.html#slide-7" target="_top">발표 페이지 열기 ↗</a></div>
+    </aside>
+    <main>
+      <header class="topbar"><span>RESEARCH WORKSPACE <span class="slash">/</span> <span id="breadcrumb">수집 자료</span></span><span class="tag neutral">STATIC DEMO · API 호출 없음</span></header>
+      <section class="intro"><div class="eyebrow">FROM DOCUMENTS TO EVIDENCE</div><h1>특징을 추출하기 전에,<br>근거부터 확인합니다<span>.</span></h1><p>Steam 게임 특성 추출 실험의 수집 현황과 검색 품질을 직접 살펴보세요.</p></section>
+      <div class="game-heading"><div><span id="game-id" class="mono"></span><h2 id="game-name">데이터 불러오는 중</h2></div><span class="tag collected">실제 수집 데이터</span></div>
+      <nav class="tabs" aria-label="데모 화면"><button data-view="inventory" aria-current="page">01 <span>수집 자료</span></button><button data-view="search">02 <span>근거 검색</span></button><button data-view="quality">03 <span>품질 점검</span></button><button data-view="status">04 <span>진행 상태</span></button></nav>
+      <div id="content" aria-live="polite"><div class="empty">검증된 정적 JSON을 읽고 있습니다…</div></div>
+      <footer><span>근거 문서 조회 + 로컬 BM25 검색</span><span id="snapshot">수집 스냅샷 로딩 중</span></footer>
+    </main>
+  </div>
+  <dialog id="source-dialog"><div class="dialog-top"><span class="eyebrow">SOURCE INSPECTOR</span><button id="close-dialog" aria-label="원문 닫기">닫기 ✕</button></div><div id="source-content"></div></dialog>
+</body>
+</html>

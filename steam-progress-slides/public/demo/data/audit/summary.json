@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-10-23T06:08:06.581494+00:00",
+  "api_calls_performed": 0,
+  "reviewer_kind": "agent",
+  "independent_human_review": false,
+  "method": "All 120 document titles and broad rule-keyword sentence windows screened; positive spans and top search hits inspected in context. Negative labels mean no qualifying evidence identified by this pass, not proof that none exists.",
+  "annotation_sha256": "900f180a0a0842dd1cd73b4286c98be058fa2176108df6d042e99e48ea72b0d0",
+  "corpus_fingerprint": "fea0af6cf338ed237ff145e0107c7bb6221e5ced5b2fe3d8bdd046358866e8e8",
+  "search_algorithm": "Unchanged existing BM25 rank/select; original four queries plus two explicit acquisition/attack probes",
+  "precision_and_global_recall": null,
+  "games": [
+    {
+      "game_id": 250900,
+      "official_documents": 78,
+      "unique_official_bodies": 72,
+      "qualifying_documents": 15,
+      "unique_qualifying_bodies": 14,
+      "audited_evidence_spans": 20,
+      "existing_B_selected_paragraphs": 15,
+      "known_evidence_paragraphs_selected": 5,
+      "known_evidence_paragraphs_total": 17
+    },
+    {
+      "game_id": 1145360,
+      "official_documents": 42,
+      "unique_official_bodies": 42,
+      "qualifying_documents": 17,
+      "unique_qualifying_bodies": 17,
+      "audited_evidence_spans": 20,
+      "existing_B_selected_paragraphs": 16,
+      "known_evidence_paragraphs_selected": 4,
+      "known_evidence_paragraphs_total": 19
+    }
+  ]
+}

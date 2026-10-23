@@ -1,0 +1,28 @@
+{
+  "checks": [
+    "real JSON loaded on project-prefixed static path",
+    "source modal, original URL and browser SHA-256 check",
+    "different query produces different actual top result",
+    "no-match does not generate results",
+    "missing wiki source is explicitly empty",
+    "all 52 Python/JavaScript comparisons also pass in browser",
+    "audited false positive reproduces at its recorded rank via actual search",
+    "game switch loads Hades counts and corpus",
+    "version mixing examples and original evidence available",
+    "Mock record and unexecuted API status separated",
+    "iframe supports search, game switch and tabs",
+    "presentation next button reaches slide 8",
+    "all 8 desktop slides fit the 16:9 canvas with correct base contrast",
+    "keyboard navigation reaches live demo",
+    "presenter notes toggle",
+    "fullscreen enters and exits",
+    "all 8 mobile slides avoid horizontal overflow",
+    "390px responsive layout has no horizontal overflow",
+    "JSON HTTP failure displays explicit error without fallback",
+    "malformed JSON schema displays explicit error",
+    "no browser JavaScript exceptions"
+  ],
+  "errors": [],
+  "static_prefix": "/steam-project/",
+  "screenshots": 16
+}
