@@ -94,6 +94,11 @@ try{
   await click('#fullscreen');await eventually(()=>js(`!!document.fullscreenElement`));await js(`document.exitFullscreen()`);pass('fullscreen enters and exits');
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
   for(let n=1;n<=8;n++) {await js(`location.hash='#slide-${n}'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[${n-1}].hidden`));assert.equal(await js(`document.documentElement.scrollWidth <= innerWidth`),true,`mobile slide ${n} fits width`);assert.deepEqual(await js(`[...document.querySelectorAll('.slide:not([hidden]) h1,.slide:not([hidden]) h3,.slide:not([hidden]) p,.slide:not([hidden]) li,.slide:not([hidden]) td')].filter(e=>e.scrollWidth>e.clientWidth+1).map(e=>e.textContent)`),[],`mobile slide ${n} text fits`);}
+  await js(`location.hash='#slide-6'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[5].hidden`));await delay(350);await shot('10-mobile-retrieval');
+  await js(`document.querySelector('.slide-scroll').scrollTop=document.querySelector('.slide-scroll').scrollHeight`);
+  assert.equal(await js(`document.querySelector('.retrieval-caveat').getBoundingClientRect().bottom <= document.querySelector('.slide-scroll').getBoundingClientRect().bottom+1`),true,'mobile slide 6 disclaimer remains reachable');
+  assert.deepEqual(await js(`[...document.querySelectorAll('.retrieval-bar>div')].map(e=>e.textContent)`),['5개','12개','4개','15개']);
+  await shot('11-mobile-retrieval-results');
   await js(`location.hash='#slide-7'`);await eventually(()=>js(`!document.querySelectorAll('.slide')[6].hidden`));await delay(350);await shot('08-mobile-presentation');
   await js(`document.querySelector('.slide-scroll').scrollTop=document.querySelector('.slide-scroll').scrollHeight`);
   assert.equal(await js(`document.querySelector('.findings-caveat').getBoundingClientRect().bottom <= document.querySelector('.slide-scroll').getBoundingClientRect().bottom+1`),true,'mobile findings disclaimer is reachable');
@@ -107,7 +112,7 @@ try{
   await send('Page.addScriptToEvaluateOnNewDocument',{source:`window.fetch=()=>Promise.resolve(new Response('{}',{status:200,headers:{'Content-Type':'application/json'}}));`});
   await send('Page.navigate',{url:demo});await eventually(()=>js(`!!document.querySelector('.load-error')`));pass('malformed JSON schema displays explicit error');
   assert.deepEqual(errors,[]);pass('no browser JavaScript exceptions');
-  await writeFile(join(artifacts,'browser-results.json'),JSON.stringify({checks,errors,static_prefix:prefix,screenshots:17},null,2)+'\n');
+  await writeFile(join(artifacts,'browser-results.json'),JSON.stringify({checks,errors,static_prefix:prefix,screenshots:19},null,2)+'\n');
   process.stdout.write(`${checks.length} browser checks passed.\n`);
 }finally{
   if(socket?.readyState===1){try{await send('Browser.close');}catch{}socket.close();}

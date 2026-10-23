@@ -9,7 +9,7 @@
 | 3 | 발표 요청에 명시된 친구 테스트 사례 | 정성적 관찰. 참가자 수·만족도·정확도는 미측정 |
 | 4 | 사용자 제공 분석 동기 | 게임 비교의 분석 축. 추출 완료 결과·게임 전체 규칙으로 해석하지 않음 |
 | 5 | feature-extraction-experiment/README.md 데이터 소스 A/B/C 정의, PILOT_REPORT.md | A=상점, B=위키+공식, C=동일 B+리뷰. 현재 위키 미확보. 실제 LLM 비교 미완료 |
-| 6 | DATA_QUALITY_REPORT.md quality-004, PILOT_REPORT.md, 데모 감사 JSON | 33개는 기존 테스트 기록. 공지 수와 근거 문단 수의 단위를 구분. 실제 API 호출 0회 |
+| 6 | DATA_QUALITY_REPORT.md quality-004, PILOT_REPORT.md, 데모 감사 JSON | 확인 근거 문단: Isaac 17개 중 선택 5개·누락 12개, Hades 19개 중 선택 4개·누락 15개. 검색으로 선택한 LLM 입력 후보이며 실제 API 전송 전. 전체 검색 정확도·재현율 아님. 33개는 기존 테스트 기록, 실제 API 호출 0회 |
 | 7 | DATA_QUALITY_REPORT.md quality-004 및 기존 감사 자료 | 자료 확보·검색 누락/오탐·버전 혼합의 한계. Isaac 5/17, Hades 4/19는 확인 근거의 B 입력 포함 결과. 전체 정확도·재현율 아님 |
 | 8 | DATA_QUALITY_REPORT.md, EVIDENCE_EXPERIMENT_REPORT.md와 사용자 제공 계획 | 현재 한계와 향후 계획. 추천 재정렬과 개선 효과 미검증 |
 
